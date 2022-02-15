@@ -17,21 +17,115 @@ body {
 /* line 14, ../sass/filePartials/_card.scss */
 body article {
   width: 30%;
-  height: 60vh;
   background-color: #14253d;
   border-radius: 15px;
 }
-/* line 20, ../sass/filePartials/_card.scss */
+/* line 19, ../sass/filePartials/_card.scss */
 body article #boxImage {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  height: 30vh;
   border-radius: 15px;
+  position: relative;
 }
-/* line 28, ../sass/filePartials/_card.scss */
+/* line 27, ../sass/filePartials/_card.scss */
+body article #boxImage::before {
+  display: none;
+  content: url(/images/icon-view.svg);
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+/* line 35, ../sass/filePartials/_card.scss */
 body article #boxImage img {
   width: 100%;
   border-radius: 15px;
+}
+/* line 39, ../sass/filePartials/_card.scss */
+body article #boxImage img:hover {
+  filter: blur(2px);
+  cursor: pointer;
+}
+/* line 46, ../sass/filePartials/_card.scss */
+body article h2 {
+  color: white;
+  margin-left: 45px;
+  margin-top: 10px;
+  font-family: 'Outfit', sans-serif;
+}
+/* line 52, ../sass/filePartials/_card.scss */
+body article h2:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+/* line 58, ../sass/filePartials/_card.scss */
+body article p {
+  text-align: center;
+  color: #8bacda;
+  font-family: 'Outfit', sans-serif;
+  padding: 10px 0;
+}
+/* line 65, ../sass/filePartials/_card.scss */
+body article #boxText1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* line 70, ../sass/filePartials/_card.scss */
+body article #boxText1 p:nth-child(1) {
+  color: #00fff7;
+}
+/* line 74, ../sass/filePartials/_card.scss */
+body article #boxText1 p:nth-child(1)::before {
+  content: url(/images/icon-ethereum.svg);
+  margin-right: 6px;
+}
+/* line 80, ../sass/filePartials/_card.scss */
+body article #boxText1 p:nth-child(2)::before {
+  content: url(/images/icon-clock.svg);
+  margin-right: 6px;
+}
+/* line 88, ../sass/filePartials/_card.scss */
+body article hr {
+  width: 80%;
+  margin: 10px auto;
+  background-color: #2f415b;
+  border: none;
+  height: 0.2vh;
+}
+/* line 97, ../sass/filePartials/_card.scss */
+body article #boxCreation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 30px;
+}
+/* line 103, ../sass/filePartials/_card.scss */
+body article #boxCreation img {
+  width: 20%;
+}
+/* line 108, ../sass/filePartials/_card.scss */
+body article #boxCreation p span {
+  color: white;
+}
+/* line 111, ../sass/filePartials/_card.scss */
+body article #boxCreation p span:hover {
+  cursor: pointer;
+  color: #00fff7;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 4, ../sass/filePartials/_mediaquery.scss */
+  body article {
+    width: 60%;
+  }
+  /* line 7, ../sass/filePartials/_mediaquery.scss */
+  body article p {
+    padding: 10px 20px;
+  }
+  /* line 13, ../sass/filePartials/_mediaquery.scss */
+  body article #boxCreation img {
+    width: 18%;
+  }
 }
